@@ -629,8 +629,7 @@ const matchers: MatchersObject = {
     };
 
     if (
-      typeof received !== 'string' &&
-      (!received || typeof received.length !== 'number')
+      typeof received !== 'string' && typeof received?.length !== 'number'
     ) {
       throw new Error(
         matcherErrorMessage(
